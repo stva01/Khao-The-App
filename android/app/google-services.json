@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "64667087533",
+    "project_id": "khao-the-scanner",
+    "storage_bucket": "khao-the-scanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64667087533:android:cc9a01120b3fc022014c24",
+        "android_client_info": {
+          "package_name": "com.google.firebase.presents.khao"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlnuidbaLWwccDPFl_eOAvqPLAs7Y0Qu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64667087533:android:8292f16821e47fc3014c24",
+        "android_client_info": {
+          "package_name": "com.khao"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlnuidbaLWwccDPFl_eOAvqPLAs7Y0Qu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
