@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:khao/pages/product_page.dart';
 import 'package:khao/pages/signup.dart';
 import 'package:openfoodfacts/openfoodfacts.dart';
 import 'package:khao/pages/scanner.dart'; // Import the Scanner class
@@ -56,8 +57,30 @@ class _HomePageState extends State<HomePage> {
                             title: Text(_searchResults![index].productName ??
                                 'Unknown'),
                             subtitle: Text(_searchResults![index].brands ?? ''),
+                            leading: _searchResults![index].imageFrontUrl !=
+                                    null
+                                ? Image.network(
+                                    _searchResults![index].imageFrontUrl ?? '',
+                                    width: 50, // Adjust the width as needed
+                                    height: 50, // Adjust the height as needed
+                                    fit: BoxFit.cover,
+                                  )
+                                : SizedBox(
+                                    width: 50, // Adjust the width as needed
+                                    height: 50, // Adjust the height as needed
+                                    child:
+                                        Placeholder(), // Placeholder if no image available
+                                  ),
                             onTap: () {
                               // Handle tap on search result
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Myapp2(
+                                    product: _searchResults![index],
+                                  ),
+                                ),
+                              );
                             },
                           );
                         },
@@ -90,15 +113,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                   ElevatedButton(
                     onPressed: (){
-                      Navigator.pushReplacementNamed(context, '/user_info');
-                    },
-                    child: Text('user_info'),
-                  ),
-                  ElevatedButton(
-                    onPressed: (){
                       Navigator.pushReplacementNamed(context, '/history');
                     },
                     child: Text('history'),
+                  ),
+                  ElevatedButton(
+                    onPressed: (){
+                      Navigator.pushReplacementNamed(context, '/user_profile');
+                    },
+                    child: Text('user_profile'),
                   ),
                 ],
                 )

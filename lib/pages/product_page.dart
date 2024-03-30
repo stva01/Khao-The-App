@@ -172,6 +172,7 @@ try {
   final user = firebase_auth.FirebaseAuth.instance.currentUser;
   final userid = user?.uid;
   print("User ID: $userid");
+  
   CollectionReference colref = FirebaseFirestore.instance.collection('Khao').doc(userid).collection('scan_product');
   
   // Get documents from the collection
@@ -184,6 +185,7 @@ try {
 
     // Perform null check before accessing fields
     if (data != null) {
+      print("Doc-ID,${doc.id}");
       print("Fetching data: $data");
     }
   });

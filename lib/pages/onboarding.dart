@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         text2: slideTexts2[index],
                         isLastSlide: index == getSlides().length - 1,
                         onNextPressed: () {
-                          Navigator.pushReplacementNamed(context, '/home');
+                          Navigator.pushReplacementNamed(context, '/user_info');
                         },
                       );
                     },

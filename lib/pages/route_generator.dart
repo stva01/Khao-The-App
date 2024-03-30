@@ -8,8 +8,10 @@ import 'package:khao/pages/login.dart';
 import 'package:khao/pages/signup.dart';
 import 'package:khao/pages/onboarding.dart';
 import 'package:khao/pages/upload.dart';
-// import 'package:khao/pages/user_info.dart';
+import 'package:khao/pages/user_info.dart';
 import 'package:khao/pages/history.dart';
+import 'package:khao/pages/user_profile.dart';
+
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -22,8 +24,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => home.HomePage());
       case '/onboarding':
         return MaterialPageRoute(builder: (_) => HomeScreen());
-      // case '/user_info':
-      //   return MaterialPageRoute(builder: (_) => UserInfoScreen());
+      case '/user_info':
+        return MaterialPageRoute(builder: (_) => UserInfoScreen());
+      case '/user_profile':
+        return MaterialPageRoute(builder: (_) => UserInfoScreen2());
       case '/history':
         return MaterialPageRoute(builder: (_) => History());
       case '/upload':
